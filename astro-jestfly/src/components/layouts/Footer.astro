@@ -1,0 +1,18 @@
+---
+import { siteConfig } from '../../config/site';
+---
+
+<footer class="border-t py-6 md:py-0">
+  <div class="container flex flex-col items-center justify-between gap-4 md:h-24 md:flex-row">
+    <div class="flex flex-col items-center gap-4 px-8 md:flex-row md:gap-2 md:px-0">
+      <p class="text-center text-sm leading-loose text-muted-foreground md:text-left">
+        Built with Astro. © 2024 {siteConfig.name}. All rights reserved.
+      </p>
+    </div>
+    <div class="flex items-center space-x-4">
+      <a href="/about" class="text-sm text-muted-foreground hover:text-foreground">About</a>
+      <a href="/terms" class="text-sm text-muted-foreground hover:text-foreground">Terms</a>
+      <a href="/privacy" class="text-sm text-muted-foreground hover:text-foreground">Privacy</a>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,21 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+---
+
+<MainLayout title="404 - Page Not Found">
+  <div class="container flex min-h-[calc(100vh-16rem)] flex-col items-center justify-center">
+    <div class="mx-auto flex w-full flex-col items-center space-y-6 text-center sm:w-[450px]">
+      <h1 class="text-9xl font-bold">404</h1>
+      <h2 class="text-3xl font-semibold">Page not found</h2>
+      <p class="text-muted-foreground">
+        The page you are looking for doesn't exist or has been moved.
+      </p>
+      <a
+        href="/"
+        class="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-11 px-8"
+      >
+        Go back home
+      </a>
+    </div>
+  </div>
+</MainLayout>

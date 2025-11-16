@@ -1,0 +1,31 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import Header from '../components/layouts/Header.astro';
+import Footer from '../components/layouts/Footer.astro';
+
+interface Props {
+  title?: string;
+  description?: string;
+  hideHeader?: boolean;
+  hideFooter?: boolean;
+}
+
+const {
+  title,
+  description,
+  hideHeader = false,
+  hideFooter = false,
+} = Astro.props;
+---
+
+<BaseLayout title={title} description={description}>
+  <div class="min-h-screen flex flex-col">
+    {!hideHeader && <Header />}
+
+    <main class="flex-1">
+      <slot />
+    </main>
+
+    {!hideFooter && <Footer />}
+  </div>
+</BaseLayout>

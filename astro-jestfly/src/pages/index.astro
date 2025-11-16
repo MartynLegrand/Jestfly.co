@@ -1,0 +1,94 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import { siteConfig } from '../config/site';
+---
+
+<MainLayout title={`${siteConfig.name} - Home`}>
+  <div class="container py-16">
+    <section class="flex flex-col items-center text-center space-y-6 py-24">
+      <h1 class="text-4xl sm:text-6xl font-bold tracking-tight">
+        Welcome to <span class="text-primary">JESTFLY</span>
+      </h1>
+      <p class="text-xl text-muted-foreground max-w-2xl">
+        The comprehensive platform for music artists, content creators, and fans.
+        Connect, create, and grow your career in one place.
+      </p>
+      <div class="flex gap-4">
+        <a
+          href="/register"
+          class="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-11 px-8"
+        >
+          Get Started
+        </a>
+        <a
+          href="/about"
+          class="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-11 px-8"
+        >
+          Learn More
+        </a>
+      </div>
+    </section>
+
+    <section class="grid gap-8 md:grid-cols-2 lg:grid-cols-3 py-12">
+      <div class="rounded-lg border bg-card p-6 space-y-3">
+        <h3 class="text-2xl font-bold">Community</h3>
+        <p class="text-muted-foreground">
+          Connect with other artists and fans. Share your work, get feedback, and build your network.
+        </p>
+        <a href="/community" class="text-primary hover:underline">
+          Explore Community →
+        </a>
+      </div>
+
+      <div class="rounded-lg border bg-card p-6 space-y-3">
+        <h3 class="text-2xl font-bold">Demo Submission</h3>
+        <p class="text-muted-foreground">
+          Submit your music demos and get professional feedback from industry experts.
+        </p>
+        <a href="/demo-submission" class="text-primary hover:underline">
+          Submit Demo →
+        </a>
+      </div>
+
+      <div class="rounded-lg border bg-card p-6 space-y-3">
+        <h3 class="text-2xl font-bold">JestCoin Wallet</h3>
+        <p class="text-muted-foreground">
+          Manage your JestCoin digital currency. Earn rewards and make transactions seamlessly.
+        </p>
+        <a href="/jestcoin" class="text-primary hover:underline">
+          Open Wallet →
+        </a>
+      </div>
+
+      <div class="rounded-lg border bg-card p-6 space-y-3">
+        <h3 class="text-2xl font-bold">Store</h3>
+        <p class="text-muted-foreground">
+          Shop for music, merchandise, and digital products from your favorite artists.
+        </p>
+        <a href="/store" class="text-primary hover:underline">
+          Browse Store →
+        </a>
+      </div>
+
+      <div class="rounded-lg border bg-card p-6 space-y-3">
+        <h3 class="text-2xl font-bold">NFT Gallery</h3>
+        <p class="text-muted-foreground">
+          Discover and collect unique digital art and music NFTs from talented creators.
+        </p>
+        <a href="/nft-gallery" class="text-primary hover:underline">
+          View Gallery →
+        </a>
+      </div>
+
+      <div class="rounded-lg border bg-card p-6 space-y-3">
+        <h3 class="text-2xl font-bold">Career Planning</h3>
+        <p class="text-muted-foreground">
+          Plan your music career with our visual canvas tool. Track milestones and goals.
+        </p>
+        <a href="/career" class="text-primary hover:underline">
+          Start Planning →
+        </a>
+      </div>
+    </section>
+  </div>
+</MainLayout>

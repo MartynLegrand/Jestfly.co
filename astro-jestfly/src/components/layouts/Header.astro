@@ -1,0 +1,31 @@
+---
+import { siteConfig } from '../../config/site';
+---
+
+<header class="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+  <div class="container flex h-16 items-center">
+    <div class="mr-4 flex">
+      <a class="mr-6 flex items-center space-x-2" href="/">
+        <span class="font-bold text-xl">{siteConfig.name}</span>
+      </a>
+      <nav class="hidden md:flex items-center space-x-6 text-sm font-medium">
+        <a href="/community" class="transition-colors hover:text-foreground/80">Community</a>
+        <a href="/store" class="transition-colors hover:text-foreground/80">Store</a>
+        <a href="/nft-gallery" class="transition-colors hover:text-foreground/80">NFT Gallery</a>
+        <a href="/jestcoin" class="transition-colors hover:text-foreground/80">JestCoin</a>
+        <a href="/demo-submission" class="transition-colors hover:text-foreground/80">Submit Demo</a>
+        <a href="/career" class="transition-colors hover:text-foreground/80">Career</a>
+      </nav>
+    </div>
+    <div class="flex flex-1 items-center justify-end space-x-4">
+      <nav class="flex items-center space-x-2">
+        <a href="/login" class="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 px-4 py-2">
+          Login
+        </a>
+        <a href="/register" class="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-9 px-4 py-2">
+          Sign Up
+        </a>
+      </nav>
+    </div>
+  </div>
+</header>
