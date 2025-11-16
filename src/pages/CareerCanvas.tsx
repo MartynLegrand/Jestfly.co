@@ -2,9 +2,8 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { useParams } from 'react-router-dom';
 import { initialCanvasState, CanvasState } from '@/types/canvas';
 import { Canvas } from '@/components/canvas/Canvas';
-import { Toolbar } from '@/components/canvas/toolbar';
+import { CanvasToolbar } from '@/components/canvas/CanvasToolbar';
 import { Timeline } from '@/components/canvas/Timeline';
-import { ProjectInfo } from '@/components/canvas/toolbar';
 import { useToast } from "@/hooks/use-toast";
 import { v4 as uuidv4 } from 'uuid';
 import { useAuth } from '@/context/AuthContext';
@@ -238,13 +237,23 @@ const CareerCanvas = () => {
 
   return (
     <div className="flex flex-col h-screen">
-      <Toolbar
+      <CanvasToolbar
         onAddNode={addNode}
         onSave={saveCanvasState}
         onToggleTimeline={toggleTimeline}
         showTimeline={showTimeline}
-        project={project}
-        onUpdateProjectInfo={updateProjectInfo}
+        project={{
+          id: projectId || '',
+          title: project.title,
+          description: project.description || '',
+          userId: user?.id || '',
+          isTemplate: false,
+          createdAt: new Date().toISOString(),
+          updatedAt: new Date().toISOString(),
+          isPublic: false,
+          collaborators: [],
+          tags: [],
+        }}
       />
 
       <div className="flex flex-1">

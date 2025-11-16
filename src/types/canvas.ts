@@ -159,3 +159,15 @@ export interface CanvasSharing {
   createdBy?: string;
   isActive: boolean;
 }
+
+export interface CanvasState {
+  nodes: any[];
+  edges: any[];
+  selectedNodeId?: string;
+}
+
+export const initialCanvasState: CanvasState = {
+  nodes: [],
+  edges: [],
+  selectedNodeId: undefined,
+};
