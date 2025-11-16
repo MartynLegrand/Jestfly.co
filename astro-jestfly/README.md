@@ -79,6 +79,7 @@ npm run preview
 - ✅ Base layouts and navigation
 - ✅ Home page and placeholder pages
 - ✅ Production build working
+- ✅ **Dark mode enabled by default** (WCAG AAA compliant)
 
 ### In Development (See ROADMAP.md)
 - Authentication system
